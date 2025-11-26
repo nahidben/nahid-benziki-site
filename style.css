@@ -469,4 +469,20 @@ body {
             flex: 1 1 100%;
         }
     }
+    /* Empiler les 3 cartes "À propos" sur mobile */
+@media (max-width: 700px) {
+  #a-propos .flex-row.three-columns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #a-propos .three-columns > * {
+    flex: 1 1 100%;
+  }
+
+  #a-propos .card {
+    width: 100%;
+  }
+}
+
 }
