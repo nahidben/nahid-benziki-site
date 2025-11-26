@@ -459,4 +459,14 @@ body {
     .hero h1 {
         font-size: 1.9rem;
     }
+
+    @media (max-width: 700px) {
+        #a-propos .flex-row.three-columns {
+            flex-direction: column;
+        }
+
+        #a-propos .three-columns>* {
+            flex: 1 1 100%;
+        }
+    }
 }
