@@ -39,7 +39,7 @@ body {
     padding: 0 1.5rem;
 }
 
-/* ========= ONGLET ========= */
+/* ========= NAVBAR ========= */
 .navbar {
     position: sticky;
     top: 0;
@@ -117,6 +117,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.18em;
     color: var(--accent);
+    font-weight: 600;
 }
 
 .hero-tag::before {
@@ -134,9 +135,10 @@ body {
 
 .hero-subtitle {
     margin: 0;
-    font-size: 0.98rem;
+    font-size: 1rem;
+    line-height: 1.5;
     color: var(--text-muted);
-    max-width: 40rem;
+    max-width: 44rem;
 }
 
 .hero-actions {
@@ -146,7 +148,6 @@ body {
     gap: 0.8rem;
 }
 
-/* Carte info sous le hero */
 .hero-info {
     display: flex;
     flex-wrap: wrap;
@@ -171,8 +172,7 @@ body {
     text-decoration: none;
     cursor: pointer;
     border: 1px solid transparent;
-    transition: background 0.15s ease, color 0.15s ease,
-        box-shadow 0.15s ease, transform 0.12s ease;
+    transition: background 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.12s ease;
 }
 
 .btn-primary {
@@ -253,20 +253,20 @@ body {
     flex-wrap: wrap;
 }
 
-.two-columns>* {
+.two-columns > * {
     flex: 1 1 280px;
 }
 
-.three-columns>* {
+.three-columns > * {
     flex: 1 1 230px;
 }
 
-/* ========= CARTES  ========= */
+/* ========= CARTES ========= */
 .card {
     background: #ffffff;
     border-radius: var(--radius);
     border: 1px solid var(--border);
-    padding: 1rem 1rem 1.15rem;
+    padding: 1.1rem 1.1rem 1.25rem;
     font-size: 0.95rem;
     box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
     transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
@@ -274,7 +274,7 @@ body {
 
 .card h3 {
     margin: 0 0 0.4rem;
-    font-size: 1rem;
+    font-size: 1.02rem;
 }
 
 .card:hover {
@@ -284,25 +284,27 @@ body {
 }
 
 .card-list {
-    margin: 0.4rem 0 0;
+    margin: 0.5rem 0 0;
     padding-left: 1.1rem;
     font-size: 0.9rem;
     color: var(--text-muted);
+    line-height: 1.5;
 }
 
 .small-meta {
     margin: 0.1rem 0 0.6rem;
     font-size: 0.8rem;
-    color: var(--text-muted);
+    color: var(--accent);
+    font-weight: 500;
 }
 
 /* ========= TIMELINE (PARCOURS) ========= */
 .timeline {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
     border-left: 2px solid var(--accent-soft);
-    padding-left: 1rem;
+    padding-left: 1.2rem;
 }
 
 .timeline-item {
@@ -313,8 +315,8 @@ body {
 .timeline-item::before {
     content: "";
     position: absolute;
-    left: -1.1rem;
-    top: 0.3rem;
+    left: -1.35rem;
+    top: 0.35rem;
     width: 11px;
     height: 11px;
     border-radius: 50%;
@@ -324,27 +326,28 @@ body {
 
 .timeline-item h3 {
     margin: 0 0 0.2rem;
-    font-size: 1rem;
+    font-size: 1.05rem;
 }
 
 .timeline-meta {
     margin: 0 0 0.6rem;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
     color: var(--text-muted);
+    font-weight: 500;
 }
 
 /* ========= EXPERIENCES ========= */
 .experience-grid {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem;
+    flex-direction: column;
+    gap: 1.3rem;
 }
 
 .experience-card {
-    flex: 1 1 calc(50% - 1.2rem);
+    width: 100%;
     background: #ffffff;
     border-radius: 14px;
-    padding: 1.2rem 1.4rem;
+    padding: 1.3rem 1.4rem;
     border: 1px solid var(--border);
     box-shadow: 0 14px 32px rgba(15, 23, 42, 0.06);
     display: flex;
@@ -368,7 +371,7 @@ body {
 
 .experience-header h3 {
     margin: 0;
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     font-weight: 600;
 }
 
@@ -386,10 +389,21 @@ body {
 }
 
 .experience-card ul {
-    margin: 0;
-    padding-left: 1.1rem;
+    margin: 0.2rem 0;
+    padding-left: 1.2rem;
     font-size: 0.9rem;
     color: var(--text-muted);
+    line-height: 1.55;
+}
+
+.exp-tools {
+    margin: 0.4rem 0 0;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    background: var(--bg-section-alt);
+    padding: 0.45rem 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
 }
 
 /* ========= CONTACT ========= */
@@ -402,6 +416,7 @@ body {
 .contact-flex a {
     color: var(--accent);
     text-decoration: none;
+    font-weight: 500;
 }
 
 .contact-flex a:hover {
@@ -410,7 +425,7 @@ body {
 
 /* ========= FOOTER ========= */
 .footer {
-    padding: 1.4rem 0 1.8rem;
+    padding: 1.5rem 0 2rem;
     font-size: 0.85rem;
     color: var(--text-muted);
 }
@@ -442,7 +457,18 @@ body {
         align-items: flex-start;
     }
 
-    .experience-card {
+    .experience-header {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .flex-row.three-columns {
+        flex-direction: column;
+    }
+
+    .three-columns > * {
         flex: 1 1 100%;
     }
 }
@@ -452,37 +478,7 @@ body {
         padding: 1.4rem 1.1rem 1.6rem;
     }
 
-    .nav-links {
-        font-size: 0.8rem;
-    }
-
     .hero h1 {
         font-size: 1.9rem;
     }
-
-    @media (max-width: 700px) {
-        #a-propos .flex-row.three-columns {
-            flex-direction: column;
-        }
-
-        #a-propos .three-columns>* {
-            flex: 1 1 100%;
-        }
-    }
-    /* Empiler les 3 cartes "À propos" sur mobile */
-@media (max-width: 700px) {
-  #a-propos .flex-row.three-columns {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  #a-propos .three-columns > * {
-    flex: 1 1 100%;
-  }
-
-  #a-propos .card {
-    width: 100%;
-  }
-}
-
 }
